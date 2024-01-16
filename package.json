@@ -1,0 +1,23 @@
+{
+  "name": "mfabiia.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "ELEVENTY_ENV=development eleventy",
+    "watch:tailwind": "npx tailwindcss -i ./src/static/css/input.css -o ./public/static/css/styles.css -w",
+    "start": "npm run watch:eleventy & npm run watch:tailwind",
+    "build": "npm run build:eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "2.0.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
