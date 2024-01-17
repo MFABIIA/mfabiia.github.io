@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFABIIA : Monash Facility for Advanced Bioimaging, Innovation and Image Analysis</title>
+    <link href="./static/css/styles.css" rel="stylesheet">
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+
+<body x-data="{open:false}">
+    <div class="font-sans antialiased text-gray-600 min-h-full flex flex-col [overflow-anchor:none]" id="app">
+        <header class="relative z-50 w-full flex-none text-sm font-semibold leading-6 text-slate-900">
+            <nav aria-label="Global" class="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
+                <div class="relative flex items-center py-[2.125rem]">
+                    <div class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5"></div>
+                    <a class="flex-none text-slate-900 text-white" href="/">
+                        <span class="sr-only">FABIIA</span>
+                        <h1 class="text-white text-6xl font-bold ">
+                            <span
+                                class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-indigo-800 relative inline-block">
+                                <span class="relative text-white p-6">FABIIA</span></span>
+                        </h1>
+                    </a>
+                    <div class="ml-auto hidden lg:flex lg:items-center">
+                        <a class="ml-8" href="/analysis">Image Analysis</a>
+                        <a class="ml-8" href="/contact">Contact</a>
+                        <a class="ml-8" href="/about">About</a>
+                    </div>
+
+                    <button type="button" @click="open = true"
+                        class="-my-1 -mr-1 ml-6 flex h-8 w-8 items-center justify-center lg:hidden"><span
+                            class="sr-only">Open navigation</span><svg viewBox="0 0 24 24"
+                            class="h-6 w-6 stroke-slate-900">
+                            <path d="M3.75 12h16.5M3.75 6.75h16.5M3.75 17.25h16.5" fill="none" stroke-width="1.5"
+                                stroke-linecap="round"></path>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <div class="relative isolate pt-16 pb-16 p-5 lg:px-8 bg-[url('../images/bg.jpg')]">
+            <div class="mx-auto max-w-2xl py-25">
+                <div class="text-center">
+                    <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Facility for Advanced
+                        Bioimaging, Innovation and Image Analysis</h1>
+                    <p class="mt-6 text-lg leading-8 text-gray-600">We do imaging.</p>
+                </div>
+            </div>
+        </div>
+        <div class="py-5 sm:columns-1 md:columns-4 lg:columns-4">
+            <div class="relative w-full overflow-hidden">
+                <img src="./static/images/section1.jpg" alt="section1" class="object-cover w-full h-80">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <h2 class="text-white text-3xl font-bold ">
+                        <span
+                            class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-indigo-800 relative inline-block">
+                            <a href="/instruments/tirf" class="relative text-white p-6">TIRF</a></span>
+                    </h2>
+                </div>
+            </div>
+            <div class="relative w-full overflow-hidden">
+                <img src="./static/images/section2.jpg" alt="section1" class="object-cover w-full h-80">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <h2 class="text-white text-3xl font-bold"><span
+                            class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-indigo-800 relative inline-block">
+                            <a href="/instruments/llsm" class="relative text-white p-6">LLSM</a></span></h2>
+                </div>
+            </div>
+            <div class="relative w-full overflow-hidden">
+                <img src="./static/images/section3.jpg" alt="section1" class="object-cover w-full h-80">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <h2 class="text-white text-3xl font-bold"><span
+                            class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-indigo-800 relative inline-block">
+                            <a href="/instruments/aurora" class="relative text-white p-6">Aurora</a></span></h2>
+                </div>
+            </div>
+            <div class="relative w-full overflow-hidden">
+                <img src="./static/images/section4.jpg" alt="section1" class="object-cover w-full h-80">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <h2 class="text-white text-3xl font-bold"><span
+                            class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-indigo-800 relative inline-block">
+                            <a href="/instruments/linescan" class="relative text-white p-6">Line scan</a></span></h2>
+                </div>
+            </div>
+            <!-- ... -->
+        </div>
+        <div class="relative z-50 w-full flex-none text-sm font-semibold leading-6 text-slate-900">
+
+            <div class="mx-auto max-w-container p-6 sm:p-6 lg:p-8">
+                <div class="mx-auto max-w-2xl py-25 text-center">
+                    <h2 class="text-3xl">Not sure which instrument is the right choice for your experiment?
+                        <a href="/contact" class="underline decoration-sky-500">Contact us.</a> We are here to help.
+                    </h2>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- mobile nav -->
+    <div id="headlessui-portal-root" x-show="open">
+        <div data-headlessui-portal=""><button type="button" data-headlessui-focus-guard="true" aria-hidden="true"
+                style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"></button>
+            <div>
+                <div class="fixed inset-0 z-50 overflow-hidden lg:hidden" id="headlessui-dialog-13" role="dialog"
+                    aria-modal="true" data-headlessui-state="open" aria-labelledby="headlessui-dialog-title-15">
+                    <div class="absolute inset-0 bg-slate-900/25 backdrop-blur-sm transition-opacity opacity-100"></div>
+                    <div class="fixed inset-0 flex items-start justify-end overflow-y-auto translate-x-0">
+                        <div class="min-h-full w-[min(20rem,calc(100vw-theme(spacing.10)))] bg-white shadow-2xl ring-1 ring-black/10 transition"
+                            id="headlessui-dialog-panel-14" data-headlessui-state="open">
+                            <h2 class="sr-only" id="headlessui-dialog-title-15" data-headlessui-state="open">Navigation
+                            </h2><button type="button" @click="open = false"
+                                class="absolute right-6 top-5 flex h-8 w-8 items-center justify-center"
+                                tabindex="0"><span class="sr-only">Close navigation</span><svg
+                                    class="h-3.5 w-3.5 overflow-visible stroke-slate-900" fill="none" stroke-width="1.5"
+                                    stroke-linecap="round" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0L14 14M14 0L0 14"></path>
+                                </svg></button>
+                            <nav class="divide-y divide-slate-900/10 text-base leading-7 text-slate-900">
+                                <div class="px-8 py-6"><a class="block w-9 overflow-hidden" href="/"><span
+                                            class="">FABIIA</span></a></div>
+                                <div class="px-8 py-6">
+                                    <div class="-my-2 items-start space-y-2">
+                                        <a class="block w-full py-2 font-semibold" href="/analysis">Image Analysis</a>
+                                        <a class="block w-full py-2 font-semibold" href="/contact">Contact</a>
+                                        <a class="block w-full py-2 font-semibold" href="/about">About</a>
+                                    </div>
+
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div><button type="button" data-headlessui-focus-guard="true" aria-hidden="true"
+                style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"></button>
+        </div>
+    </div>
+</body>
+
+</html>
