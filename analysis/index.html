@@ -11,7 +11,7 @@
 
 <body x-data="{open:false}">
     <div class="font-sans antialiased text-gray-600 min-h-full flex flex-col [overflow-anchor:none]" id="app">
-        <header class="relative z-50 w-full flex-none text-sm font-semibold leading-6 text-slate-900">
+         <header class="relative z-50 w-full flex-none text-sm font-semibold leading-6 text-slate-900">
             <nav aria-label="Global" class="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
                 <div class="relative flex items-center py-[2.125rem]">
                     <div class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5"></div>
@@ -19,11 +19,11 @@
                         <span class="sr-only">FABIIA</span>
                         <h1 class="text-white text-6xl font-bold ">
                             <span
-                                class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-indigo-800 relative inline-block">
+                                class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-one relative inline-block">
                                 <span class="relative text-white p-6">FABIIA</span></span>
                         </h1>
                     </a>
-                    <div class="ml-auto hidden lg:flex lg:items-center">
+                    <div class="ml-auto hidden lg:flex lg:items-center text-cpl-one text-xl">
                         <a class="ml-8" href="/analysis">Image Analysis</a>
                         <a class="ml-8" href="/contact">Contact</a>
                         <a class="ml-8" href="/about">About</a>
@@ -44,7 +44,13 @@
         <div class="relative z-50 w-full flex-none text-sm font-semibold leading-6 text-slate-900">
             <div class="mx-auto max-w-container p-5">
                 <div class="prose prose-slate prose-w-xl lg:prose-lg">
-                    <h1>Image Analysis</h1>
+                    <h1>Analysis services</h1>
+<ul>
+<li><a href="/analysis/sma">Single molecule analysis</a></li>
+<li><a href="/analysis/fcs">FCS</a></li>
+<li><a href="/analysis/segmentation">3D image segmentation</a></li>
+<li><a href="/analysis/tracking">4D organelle tracking</a></li>
+</ul>
 
                 </div>
 
