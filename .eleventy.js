@@ -19,6 +19,7 @@ module.exports = function (eleventyConfig) {
         files: ['./public/static/**/*.css', './public/static/**/*.js', './public/**/*.html'],
     });
     eleventyConfig.addPassthroughCopy("./src/static/**/*.jpg");
+    eleventyConfig.addPassthroughCopy("./src/static/**/*.mp4");
 
     return {
         dir: {

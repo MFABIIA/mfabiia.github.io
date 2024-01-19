@@ -1,6 +1,6 @@
 ---
 layout: 'base.njk'
-permalink: '/instruments/aurora/'
+permalink: '/innovation/aurora/'
 title: 'Aurora'
 ---
 

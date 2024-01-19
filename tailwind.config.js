@@ -8,7 +8,16 @@ module.exports = {
       body: ['Inter', 'system-ui', 'sans-serif'],
     },
 
-    extend: {},
+
+    extend: {
+      colors: {
+        'cpl-one': '#2C3531',
+        'cpl-two': '#116466',
+        'cpl-three': '#D9B08C',
+        'cpl-four': '#FFCB9A',
+        'cpl-five': '#D1E8E2'
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/typography'),
