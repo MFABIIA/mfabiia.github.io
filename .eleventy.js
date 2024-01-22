@@ -12,8 +12,7 @@ module.exports = function (eleventyConfig) {
         breaks: true,
         linkify: true
     }
-    let md = markdownIt(md_it_options).use(markdownItAttrs)
-    eleventyConfig.setLibrary("md", md);
+    eleventyConfig.setLibrary("md", markdownIt(md_it_options).use(markdownItAttrs));
 
     eleventyConfig.setBrowserSyncConfig({
         files: ['./public/static/**/*.css', './public/static/**/*.js', './public/**/*.html'],

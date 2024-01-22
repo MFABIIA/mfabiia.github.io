@@ -9,13 +9,13 @@
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 
-<body x-data="{open:false}">
+<body x-data="{open:false}" class="min-h-screen bg-cpl-bg text-slate-50">
     <div class="font-sans antialiased text-gray-600 min-h-full flex flex-col [overflow-anchor:none]" id="app">
         {% include "header.njk" %}
 
-        <div class="relative z-50 w-full flex-none text-sm font-semibold leading-6 text-slate-900">
+        <div class="relative z-50 w-full flex-none text-sm font-semibold leading-6 text-slate-50">
             <div class="mx-auto max-w-container p-5">
-                <div class="prose prose-slate prose-w-xl lg:prose-lg">
+                <div class="prose dark:prose-invert prose-w-xl lg:prose-lg text-slate-50">
                     {{ content | safe }}
                 </div>
 

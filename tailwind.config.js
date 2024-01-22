@@ -15,8 +15,13 @@ module.exports = {
         'cpl-two': '#116466',
         'cpl-three': '#D9B08C',
         'cpl-four': '#FFCB9A',
-        'cpl-five': '#D1E8E2'
-      },
+        'cpl-five': '#D1E8E2',
+        'cpl-bg': '#1A0315',
+        'cpl-main': '#88D317',
+        'cpl-text': '#000000',
+        'cpl-logo-higlight': '#6E3667',
+        'cpl-border': '#535353',
+      }
     },
   },
   plugins: [
