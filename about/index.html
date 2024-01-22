@@ -9,42 +9,49 @@
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 
-<body x-data="{open:false}">
+<body x-data="{open:false}" class="min-h-screen bg-cpl-bg text-slate-50">
     <div class="font-sans antialiased text-gray-600 min-h-full flex flex-col [overflow-anchor:none]" id="app">
-         <header class="relative z-50 w-full flex-none text-sm font-semibold leading-6 text-slate-900">
-            <nav aria-label="Global" class="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
-                <div class="relative flex items-center py-[2.125rem]">
-                    <div class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5"></div>
-                    <a class="flex-none text-slate-900 text-white" href="/">
-                        <span class="sr-only">FABIIA</span>
-                        <h1 class="text-white text-6xl font-bold ">
-                            <span
-                                class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-one relative inline-block">
-                                <span class="relative text-white p-6">FABIIA</span></span>
-                        </h1>
-                    </a>
-                    <div class="ml-auto hidden lg:flex lg:items-center text-cpl-one text-xl">
-                        <a class="ml-8" href="/analysis">Image Analysis</a>
-                        <a class="ml-8" href="/contact">Contact</a>
-                        <a class="ml-8" href="/about">About</a>
-                    </div>
+        <header class="relative z-50 w-full flex-none text-sm font-semibold leading-6 text-cpl-text">
+    <nav aria-label="Global" class="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
+        <div class="relative flex items-center py-[2.125rem]">
+            <div class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5"></div>
+            <a class="flex-none text-slate-900 text-white" href="/">
+                <span class="sr-only">FABIIA</span>
+                <h1 class="text-white text-6xl font-bold ">
+                    <span
+                        class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-logo-higlight relative inline-block">
+                        <span class="relative text-cpl-main p-6">FABIIA</span></span>
+                </h1>
+            </a>
+            <div class="ml-auto hidden lg:flex lg:items-center text-cpl-main text-xl">
+                <a class="ml-8" href="/analysis">Image Analysis</a>
+                <a class="ml-8" href="/contact">Contact</a>
+                <a class="ml-8" href="/about">About</a>
+            </div>
 
-                    <button type="button" @click="open = true"
-                        class="-my-1 -mr-1 ml-6 flex h-8 w-8 items-center justify-center lg:hidden"><span
-                            class="sr-only">Open navigation</span><svg viewBox="0 0 24 24"
-                            class="h-6 w-6 stroke-slate-900">
-                            <path d="M3.75 12h16.5M3.75 6.75h16.5M3.75 17.25h16.5" fill="none" stroke-width="1.5"
-                                stroke-linecap="round"></path>
-                        </svg>
-                    </button>
-                </div>
-            </nav>
-        </header>
+            <button type="button" @click="open = true"
+                class="-my-1 -mr-1 ml-6 flex h-8 w-8 items-center justify-center lg:hidden"><span class="sr-only">Open
+                    navigation</span><svg viewBox="0 0 24 24" class="h-6 w-6 stroke-slate-900">
+                    <path d="M3.75 12h16.5M3.75 6.75h16.5M3.75 17.25h16.5" fill="none" stroke-width="1.5"
+                        stroke-linecap="round"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+</header>
 
-        <div class="relative z-50 w-full flex-none text-sm font-semibold leading-6 text-slate-900">
+        <div class="relative z-50 w-full flex-none text-sm font-semibold leading-6 text-slate-50">
             <div class="mx-auto max-w-container p-5">
-                <div class="prose prose-slate prose-w-xl lg:prose-lg">
-                    <h1>About</h1>
+                <div class="prose dark:prose-invert prose-w-xl lg:prose-lg text-slate-50">
+                    <h2>FABIIA :</h2>
+<p class="lead">FABIIA is an advanced imaging hub to bring advanced microscopy and custom established innovative approaches to the doorsteps of researchers via collaborative endeavours.</p>
+<p>We aim to integrate research project oriented experimental design, imaging approaches, visualization and analysis and provide support through to research outputs. FABIIA will create collaborative partnerships on custom built microscopes with technology implemented by the Arumugam lab or advanced commercial microscopes such as the 3i LLSM. Fee-for-services are also available based on the scope and appropriateness of the project through a peer-reviewed process of proposals. Assistance and training will be provided on advanced technologies for independent operation. Image analysis hardware will be enabled via Monash eResearch. All analysis routines are developed within the Arumugam and Bell labs and will be tailored to various projects under collaborative agreements.</p>
+<p>Through FABIIA based collaborative programs, we will partner with Monash BDI scientists to:</p>
+<ul>
+<li>Consult on experimental design, sample preparation and appropriate techniques.</li>
+<li>Implement complete data acquisition, visualization, and analysis.</li>
+<li>Understand future requirements where no commercial technology is available and innovate customised solutions.</li>
+</ul>
 
                 </div>
 

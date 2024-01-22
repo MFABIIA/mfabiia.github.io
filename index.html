@@ -9,107 +9,108 @@
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 
-<body x-data="{open:false}" class="min-h-screen bg-gradient-to-b from-cpl-four to-cpl-five">
-    <div class="font-sans antialiased text-gray-600 min-h-full flex flex-col [overflow-anchor:none]" id="app">
-         <header class="relative z-50 w-full flex-none text-sm font-semibold leading-6 text-slate-900">
-            <nav aria-label="Global" class="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
-                <div class="relative flex items-center py-[2.125rem]">
-                    <div class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5"></div>
-                    <a class="flex-none text-slate-900 text-white" href="/">
-                        <span class="sr-only">FABIIA</span>
-                        <h1 class="text-white text-6xl font-bold ">
-                            <span
-                                class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-one relative inline-block">
-                                <span class="relative text-white p-6">FABIIA</span></span>
-                        </h1>
-                    </a>
-                    <div class="ml-auto hidden lg:flex lg:items-center text-cpl-one text-xl">
-                        <a class="ml-8" href="/analysis">Image Analysis</a>
-                        <a class="ml-8" href="/contact">Contact</a>
-                        <a class="ml-8" href="/about">About</a>
-                    </div>
 
-                    <button type="button" @click="open = true"
-                        class="-my-1 -mr-1 ml-6 flex h-8 w-8 items-center justify-center lg:hidden"><span
-                            class="sr-only">Open navigation</span><svg viewBox="0 0 24 24"
-                            class="h-6 w-6 stroke-slate-900">
-                            <path d="M3.75 12h16.5M3.75 6.75h16.5M3.75 17.25h16.5" fill="none" stroke-width="1.5"
-                                stroke-linecap="round"></path>
-                        </svg>
-                    </button>
-                </div>
-            </nav>
-        </header>
+<body x-data="{open:false}" class="min-h-screen bg-cpl-bg ">
+    <div class="font-sans antialiased text-cpl-text min-h-full flex flex-col [overflow-anchor:none]" id="app">
+        <header class="relative z-50 w-full flex-none text-sm font-semibold leading-6 text-cpl-text">
+    <nav aria-label="Global" class="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
+        <div class="relative flex items-center py-[2.125rem]">
+            <div class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5"></div>
+            <a class="flex-none text-slate-900 text-white" href="/">
+                <span class="sr-only">FABIIA</span>
+                <h1 class="text-white text-6xl font-bold ">
+                    <span
+                        class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-logo-higlight relative inline-block">
+                        <span class="relative text-cpl-main p-6">FABIIA</span></span>
+                </h1>
+            </a>
+            <div class="ml-auto hidden lg:flex lg:items-center text-cpl-main text-xl">
+                <a class="ml-8" href="/analysis">Image Analysis</a>
+                <a class="ml-8" href="/contact">Contact</a>
+                <a class="ml-8" href="/about">About</a>
+            </div>
+
+            <button type="button" @click="open = true"
+                class="-my-1 -mr-1 ml-6 flex h-8 w-8 items-center justify-center lg:hidden"><span class="sr-only">Open
+                    navigation</span><svg viewBox="0 0 24 24" class="h-6 w-6 stroke-slate-900">
+                    <path d="M3.75 12h16.5M3.75 6.75h16.5M3.75 17.25h16.5" fill="none" stroke-width="1.5"
+                        stroke-linecap="round"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+</header>
 
         <div class="relative isolate pt-16 pb-16 p-5 lg:px-8">
             <div class="mx-auto  py-25">
                 <div class="text-center">
-                    <h1 class="text-4xl font-bold tracking-tight text-cpl-one sm:text-6xl">Facility for Advanced
+                    <h1 class="text-4xl font-bold tracking-tight text-slate-50 sm:text-6xl">Facility for Advanced
                         Bioimaging, Innovation and Image Analysis</h1>
-                    <p class="mt-6 text-lg leading-8 text-cpl-two">Integrative advanced imaging, analysis and innovation
+                    <p class="mt-6 text-2xl leading-8 text-gray-300">Integrative advanced imaging, analysis and
+                        innovation
                         Hub.</p>
                 </div>
             </div>
             <!-- <div class="absolute mx-auto max-w-2xl inset-x-0 bottom-0 h-px bg-slate-900/5"></div> -->
         </div>
-        <div class="pt-6">
+        <div class="pt-6 text-slate-50">
 
-            <div class="mx-auto max-w-2xl text-center py-14">
+            <div class="mx-auto max-w-2xl text-center  py-14">
                 <h2 class="text-3xl">Available as service</h2>
             </div>
             <div class="py-5 px-5 sm:columns-1 md:columns-3 lg:columns-3 ">
-                <a href="/instruments/tirf">
-                    <div class="relative  w-full  mb-12 overflow-hidden rounded-lg">
-                        <!-- <img src="./static/images/section1.jpg" alt="section1" class="object-cover w-full h-80"> -->
-                        <span class="absolute flex inset-0 items-center justify-center">
-                            <span
-                                class="text-center before:opacity-50 before:box-decoration-clone before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-three relative inline-block p-6">
-                                <span class="relative text-cpl-five text-3xl font-bold">Single molecule imaging</span>
-                            </span>
-                        </span>
-                        <video autoplay loop muted class="object-cover w-full h-80">
-                            <source src="/static/videos/single_particle_bg.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </a>
-                <a href="/instruments/llsm">
-                    <div class="relative w-full overflow-hidden rounded-lg">
-                        <!-- <span class="absolute inset-0 flex items-center justify-center">
-                            <h2 class="text-cpl-five z-10 text-3xl font-bold text-center"><span
-                                    class="box-decoration-clone  before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-three relative inline-block p-6">
-                                    </span></h2>
-                        </span> -->
-                        <span class="absolute flex inset-0 items-center justify-center">
-                            <span
-                                class="text-center before:opacity-50 before:box-decoration-clone before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-three relative inline-block p-6">
-                                <span class="relative text-cpl-five text-3xl font-bold">LLSM<br />(Lattice
-                                    Light
-                                    Sheet
-                                    Microscopy)</span>
-                            </span>
-                        </span>
-                        <video autoplay loop muted class="object-cover w-full h-80">
-                            <source src="/static/videos/llsm_bg.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </a>
-                <a href="/instruments/alia">
-                    <div class="relative w-full overflow-hidden rounded-lg">
-                        <span class="absolute flex inset-0 items-center justify-center">
-                            <span
-                                class="text-center before:opacity-75 before:box-decoration-clone before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-three relative inline-block p-6">
-                                <span class="relative text-cpl-five text-3xl font-bold">ALIA<br />(Automated
-                                    long-term imaging and analysis)</span>
-                            </span>
-                        </span>
-                        <video autoplay loop muted class="object-cover w-full h-80">
-                            <source src="/static/videos/alia_bg.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </a>
+                
+<a href="/instruments/tirf">
+    <div class="relative  w-full  mb-12 overflow-hidden rounded-lg border-cpl-border border-2">
+        <!-- <img src="./static/images/section1.jpg" alt="section1" class="object-cover w-full h-80"> -->
+        <span class="absolute flex inset-0 items-center justify-center">
+            <span
+                class="text-center before:opacity-50 before:box-decoration-clone before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-logo-higlight relative inline-block p-6">
+                <span class="relative text-cpl-five text-3xl font-bold">Single molecule imaging</span>
+            </span>
+        </span>
+        <video autoplay loop muted class="object-cover w-full h-80">
+            <source src="/static/videos/single_particle_bg.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</a>
+
+                
+<a href="/instruments/llsm">
+    <div class="relative  w-full  mb-12 overflow-hidden rounded-lg border-cpl-border border-2">
+        <!-- <img src="./static/images/section1.jpg" alt="section1" class="object-cover w-full h-80"> -->
+        <span class="absolute flex inset-0 items-center justify-center">
+            <span
+                class="text-center before:opacity-50 before:box-decoration-clone before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-logo-higlight relative inline-block p-6">
+                <span class="relative text-cpl-five text-3xl font-bold">LLSM<br />(Lattice Light Sheet Microscopy)</span>
+            </span>
+        </span>
+        <video autoplay loop muted class="object-cover w-full h-80">
+            <source src="/static/videos/llsm_bg.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</a>
+
+                
+<a href="/instruments/alia">
+    <div class="relative  w-full  mb-12 overflow-hidden rounded-lg border-cpl-border border-2">
+        <!-- <img src="./static/images/section1.jpg" alt="section1" class="object-cover w-full h-80"> -->
+        <span class="absolute flex inset-0 items-center justify-center">
+            <span
+                class="text-center before:opacity-50 before:box-decoration-clone before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-logo-higlight relative inline-block p-6">
+                <span class="relative text-cpl-five text-3xl font-bold">ALIA<br />(Automated long-term imaging and analysis)</span>
+            </span>
+        </span>
+        <video autoplay loop muted class="object-cover w-full h-80">
+            <source src="/static/videos/alia_bg.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</a>
+
+
                 <!-- <div class="relative w-full overflow-hidden">
                     <img src="./static/images/section4.jpg" alt="section1" class="object-cover w-full h-80">
                     <div class="absolute inset-0 flex items-center justify-center">
@@ -121,135 +122,143 @@
                 </div> -->
             </div>
         </div>
-        <div class="py-6">
+        <div class="py-6 text-slate-50">
 
             <div class="mx-auto max-w-2xl text-center py-14">
                 <h2 class="text-3xl">Analysis services</h2>
             </div>
             <div class="py-5 px-5 sm:columns-1 md:columns-4 lg:columns-4 ">
-                <a href="/analysis/sma">
-                    <div class="relative  w-full  mb-12 overflow-hidden rounded-lg">
-                        <!-- <img src="./static/images/section1.jpg" alt="section1" class="object-cover w-full h-80"> -->
-                        <span class="absolute flex inset-0 items-center justify-center">
-                            <span
-                                class="text-center before:opacity-50 before:box-decoration-clone before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-three relative inline-block p-6">
-                                <span class="relative text-cpl-five text-3xl font-bold">Single molecule Analysis</span>
-                            </span>
-                        </span>
-                        <video autoplay loop muted class="object-cover w-full h-80">
-                            <source src="/static/videos/single_particle_bg.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </a>
-                <a href="/analysis/fcs">
-                    <div class="relative w-full overflow-hidden rounded-lg">
-                        <!-- <span class="absolute inset-0 flex items-center justify-center">
-                            <h2 class="text-cpl-five z-10 text-3xl font-bold text-center"><span
-                                    class="box-decoration-clone  before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-three relative inline-block p-6">
-                                    </span></h2>
-                        </span> -->
-                        <span class="absolute flex inset-0 items-center justify-center">
-                            <span
-                                class="text-center before:opacity-50 before:box-decoration-clone before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-three relative inline-block p-6">
-                                <span class="relative text-cpl-five text-3xl font-bold">FCS</span>
-                            </span>
-                        </span>
-                        <video autoplay loop muted class="object-cover w-full h-80">
-                            <source src="/static/videos/llsm_bg.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </a>
-                <a href="/analysis/segmentation">
-                    <div class="relative w-full overflow-hidden rounded-lg">
-                        <span class="absolute flex inset-0 items-center justify-center">
-                            <span
-                                class="text-center before:opacity-75 before:box-decoration-clone before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-three relative inline-block p-6">
-                                <span class="relative text-cpl-five text-3xl font-bold">3D Image Segmentation</span>
-                            </span>
-                        </span>
-                        <video autoplay loop muted class="object-cover w-full h-80">
-                            <source src="/static/videos/alia_bg.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </a>
-                <a href="/analysis/tracking">
-                    <div class="relative w-full overflow-hidden rounded-lg">
-                        <span class="absolute flex inset-0 items-center justify-center">
-                            <span
-                                class="text-center before:opacity-75 before:box-decoration-clone before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-three relative inline-block p-6">
-                                <span class="relative text-cpl-five text-3xl font-bold">4D organelle tracking</span>
-                            </span>
-                        </span>
-                        <video autoplay loop muted class="object-cover w-full h-80">
-                            <source src="/static/videos/alia_bg.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </a>
+                
+<a href="/analysis/sma">
+    <div class="relative  w-full  mb-12 overflow-hidden rounded-lg border-cpl-border border-2">
+        <!-- <img src="./static/images/section1.jpg" alt="section1" class="object-cover w-full h-80"> -->
+        <span class="absolute flex inset-0 items-center justify-center">
+            <span
+                class="text-center before:opacity-50 before:box-decoration-clone before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-logo-higlight relative inline-block p-6">
+                <span class="relative text-cpl-five text-3xl font-bold">Single molecule Analysis</span>
+            </span>
+        </span>
+        <video autoplay loop muted class="object-cover w-full h-80">
+            <source src="/static/videos/single_particle_bg.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</a>
+
+                
+<a href="/analysis/fcs">
+    <div class="relative  w-full  mb-12 overflow-hidden rounded-lg border-cpl-border border-2">
+        <!-- <img src="./static/images/section1.jpg" alt="section1" class="object-cover w-full h-80"> -->
+        <span class="absolute flex inset-0 items-center justify-center">
+            <span
+                class="text-center before:opacity-50 before:box-decoration-clone before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-logo-higlight relative inline-block p-6">
+                <span class="relative text-cpl-five text-3xl font-bold">FCS<br />(Fluorescence Correlation Spectroscopy)</span>
+            </span>
+        </span>
+        <video autoplay loop muted class="object-cover w-full h-80">
+            <source src="/static/videos/single_particle_bg.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</a>
+
+                
+<a href="/analysis/segmentation">
+    <div class="relative  w-full  mb-12 overflow-hidden rounded-lg border-cpl-border border-2">
+        <!-- <img src="./static/images/section1.jpg" alt="section1" class="object-cover w-full h-80"> -->
+        <span class="absolute flex inset-0 items-center justify-center">
+            <span
+                class="text-center before:opacity-50 before:box-decoration-clone before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-logo-higlight relative inline-block p-6">
+                <span class="relative text-cpl-five text-3xl font-bold">3D Image Segmentation</span>
+            </span>
+        </span>
+        <video autoplay loop muted class="object-cover w-full h-80">
+            <source src="/static/videos/alia_bg.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</a>
+
+                
+<a href="/analysis/tracking">
+    <div class="relative  w-full  mb-12 overflow-hidden rounded-lg border-cpl-border border-2">
+        <!-- <img src="./static/images/section1.jpg" alt="section1" class="object-cover w-full h-80"> -->
+        <span class="absolute flex inset-0 items-center justify-center">
+            <span
+                class="text-center before:opacity-50 before:box-decoration-clone before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-logo-higlight relative inline-block p-6">
+                <span class="relative text-cpl-five text-3xl font-bold">4D organelle tracking</span>
+            </span>
+        </span>
+        <video autoplay loop muted class="object-cover w-full h-80">
+            <source src="/static/videos/alia_bg.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</a>
+
             </div>
         </div>
-        <div class="py-6">
+        <div class="py-6 text-slate-50">
 
             <div class="mx-auto max-w-2xl text-center py-14">
                 <h2 class="text-3xl">Innovation under progress</h2>
             </div>
             <div class="py-5 px-5 sm:columns-1 md:columns-3 lg:columns-3 ">
-                <a href="/innovation/lacls">
-                    <div class="relative  w-full  mb-12 overflow-hidden rounded-lg">
-                        <!-- <img src="./static/images/section1.jpg" alt="section1" class="object-cover w-full h-80"> -->
-                        <span class="absolute flex inset-0 items-center justify-center">
-                            <span
-                                class="text-center before:opacity-50 before:box-decoration-clone before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-three relative inline-block p-6">
-                                <span class="relative text-cpl-five text-3xl font-bold">LACLineS<br />(Large area
-                                    Confocal Line Scan)</span>
-                            </span>
-                        </span>
-                        <video autoplay loop muted class="object-cover w-full h-80">
-                            <source src="/static/videos/single_particle_bg.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </a>
-                <a href="/innovation/stirf">
-                    <div class="relative w-full overflow-hidden rounded-lg">
-                        <!-- <span class="absolute inset-0 flex items-center justify-center">
-                            <h2 class="text-cpl-five z-10 text-3xl font-bold text-center"><span
-                                    class="box-decoration-clone  before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-three relative inline-block p-6">
-                                    </span></h2>
-                        </span> -->
-                        <span class="absolute flex inset-0 items-center justify-center">
-                            <span
-                                class="text-center before:opacity-50 before:box-decoration-clone before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-three relative inline-block p-6">
-                                <span class="relative text-cpl-five text-3xl font-bold">SnouTIRF</span>
-                            </span>
-                        </span>
-                        <video autoplay loop muted class="object-cover w-full h-80">
-                            <source src="/static/videos/llsm_bg.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </a>
-                <a href="/innovation/aurora">
-                    <div class="relative w-full overflow-hidden rounded-lg">
-                        <span class="absolute flex inset-0 items-center justify-center">
-                            <span
-                                class="text-center before:opacity-75 before:box-decoration-clone before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-three relative inline-block p-6">
-                                <span class="relative text-cpl-five text-3xl font-bold">Aurora Australis</span>
-                            </span>
-                        </span>
-                        <video autoplay loop muted class="object-cover w-full h-80">
-                            <source src="/static/videos/alia_bg.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </a>
+                
+<a href="/innovation/lacls">
+    <div class="relative  w-full  mb-12 overflow-hidden rounded-lg border-cpl-border border-2">
+        <!-- <img src="./static/images/section1.jpg" alt="section1" class="object-cover w-full h-80"> -->
+        <span class="absolute flex inset-0 items-center justify-center">
+            <span
+                class="text-center before:opacity-50 before:box-decoration-clone before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-logo-higlight relative inline-block p-6">
+                <span class="relative text-cpl-five text-3xl font-bold">LACLineS<br />(Large area Confocal Line Scan)</span>
+            </span>
+        </span>
+        <video autoplay loop muted class="object-cover w-full h-80">
+            <source src="/static/videos/single_particle_bg.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</a>
+
+                
+<a href="/innovation/stirf">
+    <div class="relative  w-full  mb-12 overflow-hidden rounded-lg border-cpl-border border-2">
+        <!-- <img src="./static/images/section1.jpg" alt="section1" class="object-cover w-full h-80"> -->
+        <span class="absolute flex inset-0 items-center justify-center">
+            <span
+                class="text-center before:opacity-50 before:box-decoration-clone before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-logo-higlight relative inline-block p-6">
+                <span class="relative text-cpl-five text-3xl font-bold">SnouTIRF</span>
+            </span>
+        </span>
+        <video autoplay loop muted class="object-cover w-full h-80">
+            <source src="/static/videos/llsm_bg.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</a>
+
+                
+<a href="/innovation/aurora">
+    <div class="relative  w-full  mb-12 overflow-hidden rounded-lg border-cpl-border border-2">
+        <!-- <img src="./static/images/section1.jpg" alt="section1" class="object-cover w-full h-80"> -->
+        <span class="absolute flex inset-0 items-center justify-center">
+            <span
+                class="text-center before:opacity-50 before:box-decoration-clone before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-cpl-logo-higlight relative inline-block p-6">
+                <span class="relative text-cpl-five text-3xl font-bold">Aurora Australis</span>
+            </span>
+        </span>
+        <video autoplay loop muted class="object-cover w-full h-80">
+            <source src="/static/videos/alia_bg.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</a>
+
             </div>
         </div>
 
-        <div class="relative z-50 w-full flex-none text-sm font-semibold leading-6 text-slate-900">
+        <div class="relative z-50 w-full flex-none text-sm font-semibold leading-6 text-slate-50">
 
             <div class="mx-auto max-w-container p-6 sm:p-6 lg:p-8">
                 <div class="mx-auto max-w-2xl py-25 text-center">
