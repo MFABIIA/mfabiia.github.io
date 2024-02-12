@@ -31,11 +31,12 @@
             <div class="mx-auto max-w-2xl text-center  py-14">
                 <h2 class="text-3xl">Available as service</h2>
             </div>
-            <div class="py-5 sm:columns-1 md:columns-3 lg:columns-3 ">
+            <div class="py-5 sm:columns-1 md:columns-4 lg:columns-4 ">
                 {{ service.box("Single molecule imaging", "/instruments/tirf", "single_particle_bg.mp4" ) }}
                 {{ service.box("LLSM<br />(Lattice Light Sheet Microscopy)", "/instruments/llsm", "llsm_bg.mp4" ) }}
                 {{ service.box("ALIA<br />(Automated long-term imaging and analysis)", "/instruments/alia",
                 "alia_bg.mp4" ) }}
+                {{ service.box("Super Resolution", "/instruments/superres", "super_res.mp4" ) }}
 
                 <!-- <div class="relative w-full overflow-hidden">
                     <img src="./static/images/section4.jpg" alt="section1" class="object-cover w-full h-80">
@@ -85,6 +86,8 @@
 
             </div>
         </div>
+
+        {% include "footer.njk" %}
     </div>
 
 
